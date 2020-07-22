@@ -2,12 +2,15 @@ resource "aws_lb" "alb" {
 	name = "nazotoki_alb"
 	load_balancer_type = "application"
 	internal = false
-	idle_timeout = 60				  # タイムアウト(デフォルトは60)
-	enable_deletion_protection = true # 削除保護
+	# タイムアウト(デフォルトは60)
+	idle_timeout = 60
+	# 削除保護
+	enable_deletion_protection = true
 
-	subnets = {
-		data.terraform_remote_state.vpc.outputs.public_subnet_1_id
-	}
+	subnets = [
+		data.terraform_remote_state.vpc.outputs.public_subnet_1_id,
+		data.terraform_remote_state.vpc.outputs.public_subnet_2_id,
+	]
 
 	access_log {
 		bucket = data.terraform_remote_state.vpc.outputs.alb_log_bucket_id
