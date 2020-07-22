@@ -1,6 +1,6 @@
 resource "aws_lb_target_group" "nazotoki" {
   name   = "nazotoki"
-  vpc_id = data.terraform_remote_state.outputs.vpc.vpc_id
+  vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id
   port   = 80
   # target_type = "ip" # ECS Fargateの場合、IPアドレスによるルーティングが必要なので指定する
   protocol             = "HTTP" # 外部からALBはHTTPSでアクセス、ALB内部はHTTP

@@ -7,7 +7,8 @@ resource "aws_lb_listener_rule" "nazotoki" {
     target_group_arn = aws_lb_target_group.nazotoki.arn
   }
   condition {
-    field = "path-pattern"
-    value = ["/*"]
+    path_pattern {
+      values = ["/*"]
+    }
   }
 }

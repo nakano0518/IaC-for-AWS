@@ -1,7 +1,7 @@
 # レコード：　ホスト名とIPアドレスを紐づけるAレコードなどがある。ホストゾーンに格納される。
 resource "aws_route53_record" "nazotoki" {
   zone_id = data.aws_route53_zone.nazotoki.zone_id
-  name    = "www.${data.aws_route53_zone.nazotoki.name}"
+  name    = data.aws_route53_zone.nazotoki.name
   type    = "A"
 
   alias {
@@ -13,9 +13,9 @@ resource "aws_route53_record" "nazotoki" {
 
 # SSL証明書の検証用レコード
 resource "aws_route53_record" "nazotoki_certificate" {
-  name    = aws_acm_certificate.nazotoki.domain_validation_option[0].resource_record_name
-  type    = aws_acm_certificate.nazotoki.domain_validation_option[0].resource_record_type
-  records = [aws_acm_certificate.nazotoki.domain_validation_option[0].resource_value]
+  name    = aws_acm_certificate.nazotoki.domain_validation_options[0].resource_record_name
+  type    = aws_acm_certificate.nazotoki.domain_validation_options[0].resource_record_type
+  records = [aws_acm_certificate.nazotoki.domain_validation_options[0].resource_record_value]
   zone_id = data.aws_route53_zone.nazotoki.id
   ttl     = 60
 }
