@@ -1,0 +1,10 @@
+variable "app_key" {}
+variable "app_url" {}
+variable "db_host" {}
+variable "db_database" {}
+variable "db_username" {}
+variable "db_password" {}
+variable "rakuten_access_url" {}
+variable "rakuten_application_id" {}
+variable "rakuten_application_secret" {}
+variable "rakuten_affiliate_id" {}
