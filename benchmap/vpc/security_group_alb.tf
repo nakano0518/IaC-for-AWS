@@ -1,8 +1,8 @@
 
 resource "aws_security_group" "alb" {
-  name        = "nazotoki_alb"
+  name        = "benchmap_alb"
   description = "It is a security group on alb"
-  vpc_id      = aws_vpc.nazotoki.id
+  vpc_id      = aws_vpc.benchmap.id
 }
 
 resource "aws_security_group_rule" "ingress_http" {

@@ -74,8 +74,8 @@ resource "aws_db_instance" "rds" {
   vpc_security_group_ids = [data.terraform_remote_state.vpc.outputs.security_group_db_id]
   parameter_group_name   = aws_db_parameter_group.benchmap-db-param.name
   option_group_name      = aws_db_option_group.benchmap-db-option.name
-  db_subnet_group_name = aws_db_subnet_group.dbsubnet.name
-  
+  db_subnet_group_name   = aws_db_subnet_group.dbsubnet.name
+
   lifecycle {
     ignore_changes = [password]
   }

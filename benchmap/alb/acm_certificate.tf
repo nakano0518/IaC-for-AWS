@@ -1,7 +1,7 @@
 # ACM(AWS Certificate Manager)でHTTPS化するためのSSL証明書を作成。
 # SSL証明書の作成の他、ドメイン検証、SSL証明書の自動更新を担うサービス。
-resource "aws_acm_certificate" "nazotoki" {
-	domain_name = data.aws_route53_zone.nazotoki.name
+resource "aws_acm_certificate" "benchmap" {
+	domain_name = data.aws_route53_zone.benchmap.name
 	# ドメイン名を追加する場合、この項目に追加する
 	subject_alternative_names = []
   	# ドメイン所有者の検証方法。Eメール検証かDNS検証か選択。SSL証明書を自動更新できるDNS検証を使用する。

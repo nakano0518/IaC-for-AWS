@@ -21,7 +21,7 @@ resource "aws_lb_listener" "https" {
   load_balancer_arn = aws_lb.alb.arn
   port              = 443
   protocol          = "HTTPS"
-  certificate_arn    = aws_acm_certificate.nazotoki.arn # ここで作成したSSL証明書の使用 　
+  certificate_arn    = aws_acm_certificate.benchmap.arn # ここで作成したSSL証明書の使用 　
   ssl_policy        = "ELBSecurityPolicy-2016-08"      # 2020/7時点ではこのポリシーの使用が推奨
   # (参照) https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies
 

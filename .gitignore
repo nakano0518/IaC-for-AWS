@@ -19,6 +19,4 @@
 /benchmap/vpc/.terraform
 /benchmap/s3/.terraform
 /benchmap/alb/.terraform
-/benchmap/ec2/id_rsa.pub
-/benchmap/rds/terraform.tfvars
-/benchmap/vpc/terraform.tfvars
+

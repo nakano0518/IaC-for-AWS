@@ -8,7 +8,7 @@ data "aws_iam_policy_document" "alb_log" {
 	statement {
 		effect = "Allow"
 		actions = ["s3:PutObject"]
-		resources = ["arn:aws:s3:::${aws_s3_bucket.alb_log.id}/nazotoki-access-logs/*"]　# どのリソースへ書き込むか
+		resources = ["arn:aws:s3:::${aws_s3_bucket.alb_log.id}/benchmap-access-logs/*"]　# どのリソースへ書き込むか
 
 		principals {
 			type = "AWS"

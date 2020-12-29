@@ -1,5 +1,5 @@
-resource "aws_lb_target_group" "nazotoki" {
-  name   = "nazotoki"
+resource "aws_lb_target_group" "benchmap" {
+  name   = "benchmap"
   vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id
   port   = 80
   # target_type = "ip" # ECS Fargateの場合、IPアドレスによるルーティングが必要なので指定する

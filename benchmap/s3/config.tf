@@ -10,7 +10,8 @@ terraform {
 terraform {
   backend "s3" {
     bucket = "nakano-terraform.tfstate"
-    key    = "nazotoki/vpc/terraform.tfstate"
+    key    = "benchmap/s3/terraform.tfstate"
     region = "ap-northeast-1"
   }
 }
+

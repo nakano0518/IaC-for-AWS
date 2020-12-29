@@ -1,5 +1,5 @@
 resource "aws_lb" "alb" {
-	name = "nazotoki-alb"
+	name = "benchmap-alb"
 	load_balancer_type = "application"
 	internal = false
 	# タイムアウト(デフォルトは60)
