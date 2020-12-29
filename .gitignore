@@ -14,11 +14,11 @@
 /benchmap/rds/terraform.tfvars
 /benchmap/vpc/terraform.tfvars
 
-/nazotoki/ec2/.terraform
-/nazotoki/rds/.terraform
-/nazotoki/vpc/.terraform
-/nazotoki/s3/.terraform
-/nazotoki/alb/.terraform
-/nazotoki/ec2/id_rsa.pub
-/nazotoki/rds/terraform.tfvars
-/nazotoki/vpc/terraform.tfvars
+/benchmap/ec2/.terraform
+/benchmap/rds/.terraform
+/benchmap/vpc/.terraform
+/benchmap/s3/.terraform
+/benchmap/alb/.terraform
+/benchmap/ec2/id_rsa.pub
+/benchmap/rds/terraform.tfvars
+/benchmap/vpc/terraform.tfvars
